@@ -1,4 +1,4 @@
--- Пусть в таблице users поля created_at и updated_at оказались незаполненными. Заполните их текущими датой и временем.
+п»ї-- РџСѓСЃС‚СЊ РІ С‚Р°Р±Р»РёС†Рµ users РїРѕР»СЏ created_at Рё updated_at РѕРєР°Р·Р°Р»РёСЃСЊ РЅРµР·Р°РїРѕР»РЅРµРЅРЅС‹РјРё. Р—Р°РїРѕР»РЅРёС‚Рµ РёС… С‚РµРєСѓС‰РёРјРё РґР°С‚РѕР№ Рё РІСЂРµРјРµРЅРµРј.
 
 USE test1;
 
@@ -6,16 +6,16 @@ DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(255) COMMENT 'Имя покупателя',
-  birthday_at DATE COMMENT 'Дата рождения',
+  name VARCHAR(255) COMMENT 'РРјСЏ РїРѕРєСѓРїР°С‚РµР»СЏ',
+  birthday_at DATE COMMENT 'Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ',
   created_at DATE,
   updated_at DATE
-) COMMENT = 'Покупатели';
+) COMMENT = 'РџРѕРєСѓРїР°С‚РµР»Рё';
 
 INSERT INTO users (name, birthday_at) VALUES
-  ('Геннадий', '1990-10-05'),
-  ('Иван', '1998-01-12'),
-  ('Мария', '1992-08-29');
+  ('Р“РµРЅРЅР°РґРёР№', '1990-10-05'),
+  ('РРІР°РЅ', '1998-01-12'),
+  ('РњР°СЂРёСЏ', '1992-08-29');
 
 UPDATE users
 SET

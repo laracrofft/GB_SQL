@@ -1,4 +1,4 @@
--- Подсчитайте произведение чисел в столбце таблицы
+п»ї-- РџРѕРґСЃС‡РёС‚Р°Р№С‚Рµ РїСЂРѕРёР·РІРµРґРµРЅРёРµ С‡РёСЃРµР» РІ СЃС‚РѕР»Р±С†Рµ С‚Р°Р±Р»РёС†С‹
 
 DROP TABLE IF EXISTS storehouses_products;
 
@@ -6,10 +6,10 @@ CREATE TABLE storehouses_products (
   id SERIAL PRIMARY KEY,
   storehouse_id INT UNSIGNED,
   product_id INT UNSIGNED,
-  value INT UNSIGNED COMMENT 'Запас товарной позиции на складе',
+  value INT UNSIGNED COMMENT 'Р—Р°РїР°СЃ С‚РѕРІР°СЂРЅРѕР№ РїРѕР·РёС†РёРё РЅР° СЃРєР»Р°РґРµ',
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) COMMENT = 'Запасы на складе';
+) COMMENT = 'Р—Р°РїР°СЃС‹ РЅР° СЃРєР»Р°РґРµ';
 
 INSERT INTO `storehouses_products` (`id`, `storehouse_id`, `product_id`, `value`, `created_at`, `updated_at`) VALUES ('1', 739259, 2063, 7, '2001-09-15 15:28:43', '2018-03-01 16:22:12');
 INSERT INTO `storehouses_products` (`id`, `storehouse_id`, `product_id`, `value`, `created_at`, `updated_at`) VALUES ('3', 1890994, 6, 9, '1991-05-28 07:14:15', '1979-10-26 16:22:50');
