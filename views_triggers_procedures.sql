@@ -37,6 +37,14 @@ ORDER BY week_day; -- объединяем два представления, ч
 
 -- смотрим загруженность зала/зоны
 
+SELECT gym_zone_id, week_day, start_time,
+	(SELECT activity_status_id
+	FROM schedule
+	WHERE calendar_id = calendar.id AND activity_status_id = 1) AS activity_status
+FROM calendar
+WHERE gym_zone_id = 1
+ORDER BY week_day;
+
 -- триггер. проверяем наличие мест в группе
 
 DROP TRIGGER IF EXISTS check_member_quantity_before_update;
